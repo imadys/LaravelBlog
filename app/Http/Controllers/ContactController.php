@@ -35,6 +35,13 @@ class ContactController extends Controller
      */
     public function store()
     {
+
+        request()->validate([
+            'title' => 'required',
+            'name' => 'required',
+            'body' => 'required'
+        ]);
+
         $msg = new Contact();
 
         $msg->title = request('title');

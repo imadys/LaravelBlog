@@ -43,3 +43,9 @@ Route::get('/dashboard/msg/{msg}/full-msg','ContactController@fullMsg');
 // Dashboard
 Route::get('/dashboard','DashboardController@index');
 Route::get('/dashboard/posts','DashboardController@show');
+
+
+// Login
+Auth::routes();
+
+Route::get('/logout', 'DashboardController@logout');

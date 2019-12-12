@@ -16,4 +16,10 @@
     <i class="fas fa-comment-dots"></i>
       <span>Recent Messages</span></a>
   </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="/">
+    <i class="fas fa-caret-square-left"></i>
+      <span>Go Back</span></a>
+  </li>
 </ul>

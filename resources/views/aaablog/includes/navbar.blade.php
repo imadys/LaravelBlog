@@ -18,8 +18,17 @@
         <a class="nav-link" href="/contact">Contact</a>
       </li>
     </ul>
+    @if (Auth::check())
     <form class="form-inline my-2 my-lg-0">
-<a class="btn btn-outline-success my-2 my-sm-0" style="color:#fff;" href="/dashboard">Log In</a>
+<a class="btn btn-outline-success my-2 my-sm-0" style="color:#fff;" href="/logout">Log out</a>
     </form>
+    @else
+          <form class="form-inline my-2 my-lg-0">
+      <a class="btn btn-outline-success my-2 my-sm-0" style="color:#fff;" href="/login">Log In</a>
+          </form>
+          <form class="form-inline my-2 my-lg-0 ml-3">
+      <a class="btn btn-outline-success my-2 my-sm-0" style="color:#fff;" href="/register">Register</a>
+          </form>
+    @endif
   </div>
 </nav>

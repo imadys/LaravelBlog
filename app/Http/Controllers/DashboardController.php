@@ -12,10 +12,40 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     
+
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function index()
     {
         return view('dashboard.files.index');
     }
+
+
+
+    public function logout () {
+        //logout user
+        auth()->logout();
+        // redirect to homepage
+        return redirect('/');
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
