@@ -41,6 +41,17 @@
 <!-- SCRIPTS --> 
 @include('dashboard.includes.scripts')
 
+
+<!-- CkEditor -->
+
+<script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+    .create(document.querySelector('textarea'))
+    .catch(error=>{
+        console.error(error);
+    });                                             
+</script>
 </body>
 
 </html>
